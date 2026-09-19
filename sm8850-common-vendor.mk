@@ -516,6 +516,7 @@ PRODUCT_PACKAGES += \
     libnspextensiongenericqnnservice \
     libnspextensionsuperresolutionservice \
     libnspframework \
+    liboemcrypto \
     liboffscreenpoweroptfeature \
     libolc_vnd_vendor \
     libopluspal \
