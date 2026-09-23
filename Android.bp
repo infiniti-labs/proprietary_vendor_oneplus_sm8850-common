@@ -2632,35 +2632,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdmap_consent_sdk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libdmap_consent_sdk.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libdiag",
-                "libutils",
-                "libbinder_ndk",
-                "libprotobuf-cpp-lite-21.12-vendorcompat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libdpp_manager",
     owner: "oneplus",
     strip: {
@@ -4464,37 +4435,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libpal_net_if",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libpal_net_if.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libgps.utils",
-                "liblog",
-                "libandroid_net",
-                "libcrypto",
-                "libssl",
                 "libc++",
                 "libc",
                 "libm",
@@ -17288,6 +17228,35 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdmap_consent_sdk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libdmap_consent_sdk.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdiag",
+                "libutils",
+                "libbinder_ndk",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdsi_netctrl",
     owner: "oneplus",
     strip: {
@@ -18504,6 +18473,37 @@ cc_prebuilt_library_shared {
                 "libdiag",
                 "libqmi_cci",
                 "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpal_net_if",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libpal_net_if.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libgps.utils",
+                "liblog",
+                "libandroid_net",
+                "libcrypto",
+                "libssl",
                 "libc++",
                 "libc",
                 "libm",
