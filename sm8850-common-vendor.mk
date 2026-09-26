@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/oneplus/sm8850-common
 
 PRODUCT_COPY_FILES += \
-    vendor/oneplus/sm8850-common/proprietary/odm/etc/camera/media_profiles.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/media_profiles.xml \
     vendor/oneplus/sm8850-common/proprietary/odm/etc/charge.cfg:$(TARGET_COPY_OUT_ODM)/etc/charge.cfg \
     vendor/oneplus/sm8850-common/proprietary/odm/etc/init/hw/init.oplus.display.rc:$(TARGET_COPY_OUT_ODM)/etc/init/hw/init.oplus.display.rc \
     vendor/oneplus/sm8850-common/proprietary/odm/etc/init/hw/init.oplus.wifi.rc:$(TARGET_COPY_OUT_ODM)/etc/init/hw/init.oplus.wifi.rc \
@@ -138,43 +137,12 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/lm/prekill/prekill_2GB.data:$(TARGET_COPY_OUT_VENDOR)/etc/lm/prekill/prekill_2GB.data \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/lm/prekill/prekill_4GB.data:$(TARGET_COPY_OUT_VENDOR)/etc/lm/prekill/prekill_4GB.data \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/lm/prekill/prekill_6GB.data:$(TARGET_COPY_OUT_VENDOR)/etc/lm/prekill/prekill_6GB.data \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_canoe_sku1/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_sku1/video_system_specs.json \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_canoe_sku2/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_sku2/video_system_specs.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_canoe_sku3/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_sku3/video_system_specs.json \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_canoe_v1/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_v1/video_system_specs.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_canoe_v2/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_v2/video_system_specs.json \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_canoe_v3/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_v3/video_system_specs.json \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_sku1.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_sku1_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_sku1_vendor.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_sku2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_sku2.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_sku2_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_sku2_vendor.xml \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_sku3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_sku3.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_sku3_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_sku3_vendor.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_v1.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_v1_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_v1_vendor.xml \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_v2.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_v2_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_v2_vendor.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_v3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_v3.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_v3_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_v3_vendor.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_sku1.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_sku1_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_sku1_vendor.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_sku2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_sku2.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_sku2_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_sku2_vendor.xml \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_sku3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_sku3.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_sku3_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_sku3_vendor.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_v1.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_v1_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_v1_vendor.xml \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_v2.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_v2_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_v2_vendor.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_v3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_v3.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_v3_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_v3_vendor.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_profiles_canoe_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_canoe_sku1.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_profiles_canoe_sku2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_canoe_sku2.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_profiles_canoe_sku3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_canoe_sku3.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_profiles_canoe_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_canoe_v1.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_profiles_canoe_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_canoe_v2.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_profiles_canoe_v3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_canoe_v3.xml \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/models/acd/conv_detection.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/conv_detection.eai \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/models/acd/environment.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/environment.eai \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/models/acd/event.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/event.eai \
