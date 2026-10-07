@@ -187,6 +187,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm64.policy \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext-arm64.policy \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/seccomp_policy/hexlp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/hexlp.policy \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/seccomp_policy/qesdk.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qesdk.policy \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/seccomp_policy/qesdksec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qesdksec.policy \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/seccomp_policy/qsap_dcfd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qsap_dcfd.policy \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/seccomp_policy/qsap_mpamsvc.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qsap_mpamsvc.policy \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/seccomp_policy/qsap_qapeservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qsap_qapeservice.policy \
@@ -538,6 +540,10 @@ PRODUCT_PACKAGES += \
     libqdcm-algo \
     libqdcm-json-mode-parser \
     libqdcm-mode-parser \
+    libqesdk2_0 \
+    libqesdk_manager \
+    libqesdk_qshsession \
+    libqesdoem_query_sys \
     libqisl \
     libqmi \
     libqmi_cci \
@@ -567,6 +573,7 @@ PRODUCT_PACKAGES += \
     libqti-perfd \
     libqti-perfextn-intf \
     libqti-qape-engine \
+    libqti-qesdk-secure \
     libqti-s3tf \
     libqti-scenariod \
     libqti-sslite \
@@ -715,6 +722,13 @@ PRODUCT_PACKAGES += \
     vendor.qti.qccsyshal_aidl-V1-ndk_vendor \
     vendor.qti.qccvndhal_aidl-V1-ndk_vendor \
     vendor.qti.qccvndhal_aidl-halimpl \
+    vendor.qti.qesdhal-impl \
+    vendor.qti.qesdhal@1.0 \
+    vendor.qti.qesdhal@1.1 \
+    vendor.qti.qesdhal@1.2 \
+    vendor.qti.qesdhal@1.3 \
+    vendor.qti.qesdhalaidl-V2-ndk \
+    vendor.qti.qesdsys-V3-ndk \
     vendor.qti.qesdsys-V4-ndk \
     vendor.qti.qspmhal-V1-ndk \
     vendor.qti.qspmhal-impl \
