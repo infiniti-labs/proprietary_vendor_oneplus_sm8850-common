@@ -133,10 +133,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/lm/prekill/prekill_6GB.data:$(TARGET_COPY_OUT_VENDOR)/etc/lm/prekill/prekill_6GB.data \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_canoe_sku3/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_sku3/video_system_specs.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_canoe_v2/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_canoe_v2/video_system_specs.json \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_sku3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_sku3.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_v2.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_sku3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_sku3.xml \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_v2.xml \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_sku3_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_sku3_vendor.xml \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_canoe_v2_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_canoe_v2_vendor.xml \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_sku3_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_sku3_vendor.xml \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/media_codecs_performance_canoe_v2_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_canoe_v2_vendor.xml \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/models/acd/conv_detection.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/conv_detection.eai \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/models/acd/environment.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/environment.eai \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/models/acd/event.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/event.eai \
@@ -908,6 +908,10 @@ PRODUCT_PACKAGES += \
     touchDaemon
 
 PRODUCT_PACKAGES += \
+    vendor_etc_media_codecs_canoe_sku3_xml \
+    vendor_etc_media_codecs_canoe_v2_xml \
+    vendor_etc_media_codecs_performance_canoe_sku3_xml \
+    vendor_etc_media_codecs_performance_canoe_v2_xml \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so

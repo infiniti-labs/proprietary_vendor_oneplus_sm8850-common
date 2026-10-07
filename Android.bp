@@ -16060,6 +16060,34 @@ cc_prebuilt_binary {
 }
 
 install_symlink {
+    name: "vendor_etc_media_codecs_canoe_sku3_xml",
+    soc_specific: true,
+    installed_location: "etc/media_codecs_canoe_sku3.xml",
+    symlink_target: "/vendor/etc/media_codecs_canoe_sku3_vendor.xml",
+}
+
+install_symlink {
+    name: "vendor_etc_media_codecs_canoe_v2_xml",
+    soc_specific: true,
+    installed_location: "etc/media_codecs_canoe_v2.xml",
+    symlink_target: "/vendor/etc/media_codecs_canoe_v2_vendor.xml",
+}
+
+install_symlink {
+    name: "vendor_etc_media_codecs_performance_canoe_sku3_xml",
+    soc_specific: true,
+    installed_location: "etc/media_codecs_performance_canoe_sku3.xml",
+    symlink_target: "/vendor/etc/media_codecs_performance_canoe_sku3_vendor.xml",
+}
+
+install_symlink {
+    name: "vendor_etc_media_codecs_performance_canoe_v2_xml",
+    soc_specific: true,
+    installed_location: "etc/media_codecs_performance_canoe_v2.xml",
+    symlink_target: "/vendor/etc/media_codecs_performance_canoe_v2_vendor.xml",
+}
+
+install_symlink {
     name: "vendor_lib64_libEGL_adreno_so",
     soc_specific: true,
     installed_location: "lib64/libEGL_adreno.so",
