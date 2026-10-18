@@ -101,8 +101,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/init/qwesd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qwesd.rc \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/init/snapdragon_services.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/snapdragon_services.rc \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/init/vendor.qti.MemHal-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.MemHal-service.rc \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
-    vendor/oneplus/sm8850-common/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/init/vendor.qti.diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.diag.rc \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/init/vendor.qti.fastrpc.pd-default-config.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.fastrpc.pd-default-config.rc \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm-service.rc \
@@ -344,8 +342,6 @@ PRODUCT_PACKAGES += \
     libadreno_app_profiles \
     libadreno_compiler_cl \
     libadreno_utils \
-    libadsp_default_listener \
-    libadsprpc \
     libap_uir_dimming \
     libar-pal \
     libarmemlog \
@@ -362,8 +358,6 @@ PRODUCT_PACKAGES += \
     libcapiv2svarnnvendor \
     libcapiv2udk7vendor \
     libcapiv2uvvendor \
-    libcdsp_default_listener \
-    libcdsprpc \
     libclstc_algorithm_adapter \
     libclstc_gcp_adapter \
     libclstc_tm \
@@ -421,7 +415,6 @@ PRODUCT_PACKAGES += \
     libloadalgo_stub \
     libmcs \
     libmdmdetect \
-    libmdsprpc \
     libmemgen \
     libmemhalutils \
     libmemutils \
@@ -527,7 +520,6 @@ PRODUCT_PACKAGES += \
     libsdm-colormgr-algo \
     libsdm-disp-vndapis \
     libsdmextension \
-    libsdsprpc \
     libseclog \
     libsensinghubapi-prop \
     libsensinghubapi \
@@ -555,7 +547,6 @@ PRODUCT_PACKAGES += \
     libsoc_helper \
     libspcom \
     libspl \
-    libssc_default_listener \
     libssd \
     libssdStaticHelper \
     libstream_compress \
@@ -775,8 +766,6 @@ PRODUCT_PACKAGES += \
     manifest_touch_aidl.xml \
     vintf_manifext_aidl_panelchaplin.xml \
     C2PAInternetService \
-    adsprpcd \
-    cdsprpcd \
     cnss-daemon \
     diag-router \
     dspservice \
