@@ -236,9 +236,14 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_lighthousefront_1.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_lighthousefront_1.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_macanExFront_4.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_macanExFront_4.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_macanFront_4.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_macanFront_4.json \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_mariofront_3.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_mariofront_3.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_ov32c4c_4.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_ov32c4c_4.json \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_redalertfront_3.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_redalertfront_3.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_s5kjn5_3.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_s5kjn5_3.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_s5kjn5_3_actuator.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_s5kjn5_3_actuator.json \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_starcraftExFront_4.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_starcraftExFront_4.json \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_starcraftFront_4.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_starcraftFront_4.json \
+    vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_starcraftrfront_4.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_starcraftrfront_4.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_swangoosefrontmain_3.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_swangoosefrontmain_3.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_swangoosefrontsub_4.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_swangoosefrontsub_4.json \
     vendor/oneplus/sm8850-common/proprietary/vendor/etc/sensors/config/qsh_camera_u9bfront_4.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/qsh_camera_u9bfront_4.json \
@@ -440,6 +445,7 @@ PRODUCT_PACKAGES += \
     libolc_vnd_vendor \
     liboplus_sensor_stats \
     libopluspal \
+    libopluspal_wls_charger \
     libops \
     libos \
     libosensenativeproxy_client \
@@ -602,7 +608,6 @@ PRODUCT_PACKAGES += \
     libwfdutils_proprietary \
     qti.video.utils.videobufferlayout \
     sensors.qsh \
-    vendor.oplus.hardware.a2dp_offload-V1-ndk \
     vendor.qti.MemHal-V1-ndk \
     vendor.qti.diaghal-V1-ndk_vendor \
     vendor.qti.hardware.ListenSoundModelAidl-V1-ndk \
@@ -654,6 +659,8 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_libhme_dsp_skel_so \
     vendor_lib_rfsa_adsp_libmctfengine_skel_so \
     vendor_lib_rfsa_adsp_libmlawbpostproc_dsp_skel_so \
+    vendor_lib_rfsa_adsp_location_napp_header \
+    vendor_lib_rfsa_adsp_location_so \
     vendor_lib_rfsa_adsp_nearby_napp_header \
     vendor_lib_rfsa_adsp_nearby_so \
     libdiag_system \
@@ -676,6 +683,7 @@ PRODUCT_PACKAGES += \
     libwfdmmsink \
     libwfdmmsrc_system \
     libwfdnative \
+    libwfdparserlite \
     libwfdrtsp \
     libwfdservice \
     libwfdsinksm \
@@ -1183,7 +1191,6 @@ PRODUCT_PACKAGES += \
     vendor.libdpmframework \
     vendor.libdpmtcm \
     vendor.libmwqemiptablemgr \
-    vendor.oplus.hardware.radio-V4-ndk \
     vendor.qti.ImsRtpService-V2-ndk_vendor \
     vendor.qti.ImsRtpService-aidl-Impl \
     vendor.qti.data.factoryservice-V2-ndk \
@@ -1232,6 +1239,7 @@ PRODUCT_PACKAGES += \
     lib-imsvt \
     lib-imsvtextutils \
     lib-imsvtutils \
+    libSurfaceUtil_jni \
     libdpmctmgr \
     libdpmfdmgr \
     libdpmframework \
@@ -1266,7 +1274,6 @@ PRODUCT_PACKAGES += \
     libsecurity_event_olc_vnd \
     libsubsys-utils \
     libvasapi \
-    vendor.oplus.hardware.subsys_radio-V1-ndk_odm \
     CACertService \
     CneApp \
     IWlanService \
@@ -1374,6 +1381,7 @@ PRODUCT_PACKAGES += \
     init.subsys
 
 PRODUCT_PACKAGES += \
+    system_ext_priv-app_ims_lib_arm64_libSurfaceUtil_jni_so \
     system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so \
     vendor_etc_hal_uuid_map_7_xml \
     vendor_etc_hal_uuid_map_15_xml \

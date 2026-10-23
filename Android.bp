@@ -4477,6 +4477,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libopluspal_wls_charger",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libopluspal_wls_charger.so",
+            ],
+            shared_libs: [
+                "vendor.oplus.hardware.charger-V8-ndk",
+                "libbinder_ndk",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libops",
     owner: "oneplus",
     strip: {
@@ -9326,31 +9353,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.a2dp_offload-V1-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.oplus.hardware.a2dp_offload-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.MemHal-V1-ndk",
     owner: "oneplus",
     strip: {
@@ -10604,6 +10606,24 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
+    name: "vendor_lib_rfsa_adsp_location_napp_header",
+    filename: "location.napp_header",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/location.napp_header",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "vendor_lib_rfsa_adsp_location_so",
+    filename: "location.so",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/location.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
     name: "vendor_lib_rfsa_adsp_nearby_napp_header",
     filename: "nearby.napp_header",
     owner: "oneplus",
@@ -11186,7 +11206,7 @@ cc_prebuilt_library_shared {
                 "libwfdcommonutils",
                 "libwfdconfigutils",
                 "libui",
-                "libmmparser_lite",
+                "libwfdparserlite",
                 "libmmrtpdecoder",
                 "libcutils",
                 "libwfddisplayconfig",
@@ -11271,10 +11291,10 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libandroid_runtime",
-                "libgui",
                 "libui",
-                "libbinder",
                 "libinput",
+                "libbinder",
+                "libgui",
                 "libnativehelper",
                 "libutils",
                 "liblog",
@@ -11282,6 +11302,34 @@ cc_prebuilt_library_shared {
                 "android.hardware.graphics.common@1.0",
                 "android.hardware.graphics.bufferqueue@1.0",
                 "android.hardware.graphics.bufferqueue@2.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwfdparserlite",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libwfdparserlite.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libmmosal",
                 "libc++",
                 "libc",
                 "libm",
@@ -20225,31 +20273,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.radio-V4-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.oplus.hardware.radio-V4-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.ImsRtpService-V2-ndk_vendor",
     stem: "vendor.qti.ImsRtpService-V2-ndk",
     owner: "oneplus",
@@ -21535,6 +21558,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libSurfaceUtil_jni",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libSurfaceUtil_jni.so",
+            ],
+            shared_libs: [
+                "libbinder",
+                "libgui",
+                "libnativehelper",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdpmctmgr",
     owner: "oneplus",
     strip: {
@@ -22274,7 +22325,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "vendor.oplus.hardware.subsys-V5-ndk",
-                "vendor.oplus.hardware.subsys_radio-V1-ndk_odm",
+                "vendor.oplus.hardware.subsys_radio-V1-ndk",
                 "libradioapis",
                 "libipcapis",
                 "libipc-framework",
@@ -22505,32 +22556,6 @@ cc_prebuilt_library_shared {
                 "libqmi_csi",
                 "liblog",
                 "libmindroid-framework",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.subsys_radio-V1-ndk_odm",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.subsys_radio-V1-ndk_odm.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "vendor.oplus.hardware.subsys-V5-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -24473,6 +24498,13 @@ sh_binary {
     src: "proprietary/odm/bin/init.subsys.sh",
     filename: "init.subsys.sh",
     device_specific: true,
+}
+
+install_symlink {
+    name: "system_ext_priv-app_ims_lib_arm64_libSurfaceUtil_jni_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/ims/lib/arm64/libSurfaceUtil_jni.so",
+    symlink_target: "/system_ext/lib64/libSurfaceUtil_jni.so",
 }
 
 install_symlink {
