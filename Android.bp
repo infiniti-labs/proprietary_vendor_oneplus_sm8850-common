@@ -4533,8 +4533,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libosensenativeproxy_client_vendor",
-    stem: "libosensenativeproxy_client",
+    name: "libosensenativeproxy_client",
     owner: "oneplus",
     strip: {
         none: true,
@@ -12454,31 +12453,6 @@ cc_prebuilt_library_shared {
                 "libbinder_ndk",
                 "vendor.oplus.hardware.displaycolorfeature-V1-ndk",
                 "libdisplayfossfeature_nature",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.charger-V12-ndk",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.charger-V12-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -22300,7 +22274,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "vendor.oplus.hardware.subsys-V5-ndk",
-                "vendor.oplus.hardware.subsys_radio-V1-ndk",
+                "vendor.oplus.hardware.subsys_radio-V1-ndk_odm",
                 "libradioapis",
                 "libipcapis",
                 "libipc-framework",
@@ -22531,6 +22505,32 @@ cc_prebuilt_library_shared {
                 "libqmi_csi",
                 "liblog",
                 "libmindroid-framework",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.oplus.hardware.subsys_radio-V1-ndk_odm",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/vendor.oplus.hardware.subsys_radio-V1-ndk_odm.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "vendor.oplus.hardware.subsys-V5-ndk",
                 "libc++",
                 "libc",
                 "libm",

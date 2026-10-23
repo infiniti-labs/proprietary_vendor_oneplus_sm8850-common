@@ -442,7 +442,7 @@ PRODUCT_PACKAGES += \
     libopluspal \
     libops \
     libos \
-    libosensenativeproxy_client_vendor \
+    libosensenativeproxy_client \
     libpal_net_if \
     libpdmapper \
     libpdnotifier \
@@ -713,7 +713,6 @@ PRODUCT_PACKAGES += \
     libqsee_keybox_ca \
     libsensorbridge \
     libstc_color_feature \
-    vendor.oplus.hardware.charger-V12-ndk \
     vendor.oplus.hardware.cryptoeng-V1-ndk \
     vendor.oplus.hardware.cryptoeng@1.0 \
     vendor.oplus.hardware.fido.fido2ca-V1-ndk \
@@ -1267,6 +1266,7 @@ PRODUCT_PACKAGES += \
     libsecurity_event_olc_vnd \
     libsubsys-utils \
     libvasapi \
+    vendor.oplus.hardware.subsys_radio-V1-ndk_odm \
     CACertService \
     CneApp \
     IWlanService \
