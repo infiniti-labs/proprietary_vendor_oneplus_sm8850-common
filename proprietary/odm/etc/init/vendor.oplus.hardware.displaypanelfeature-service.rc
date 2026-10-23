@@ -19,6 +19,7 @@ on early-boot
     chown system system /sys/kernel/oplus_display/oplus_max_brightness
     chown root root /sys/kernel/oplus_display/panel_id
     chown root root /sys/kernel/oplus_display/panel_serial_number
+    chown root root /sys/kernel/oplus_display/panel_new_sn
 
     chmod 0666 /sys/kernel/tracing/events/sde/enable
     chmod 0666 /sys/kernel/tracing/events/sde/tracing_mark_write/enable

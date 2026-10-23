@@ -88,7 +88,7 @@ case "$target" in
         ;;
     "canoe")
         setprop vendor.mm.target.enable.qcom_parser 0
-        if [ $build_codename -le "16" ]; then
+        if [ $build_codename -le "17" ]; then
             setprop vendor.netflix.bsp_rev "Q8850-41474-1"
         fi
         case "$soc_hwid" in

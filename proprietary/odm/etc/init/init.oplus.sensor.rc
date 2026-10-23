@@ -4,10 +4,4 @@ on boot
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
     chmod 0666 /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
     chmod 0666 /dev/oplus_consumer_ir
-
-service oplus_sensor_fb /odm/bin/oplus_sensor_fb
-    user system
-    group system
-    class late_start
-    oneshot
 #endif

@@ -74,7 +74,7 @@ INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist
 INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist.vendor.radio.report_rstate", "0");
 INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist.vendor.radio.fill_eons", "0");
 INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist.vendor.radio.limit_sys_info", "0");
-INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist.vendor.radio.no_wait_for_card", "0");
+INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist.vendor.radio.no_wait_for_card", "1");
 INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist.vendor.radio.snapshot_timer", "0");
 INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist.vendor.radio.snapshot_enabled", "0");
 INSERT OR REPLACE INTO qcril_properties_table(property, def_val) VALUES("persist.vendor.radio.snapshot_data", "0");

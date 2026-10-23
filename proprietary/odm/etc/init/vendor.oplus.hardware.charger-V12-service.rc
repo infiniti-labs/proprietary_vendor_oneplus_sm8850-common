@@ -1,4 +1,4 @@
-service oplus_charger_hal_service /odm/bin/hw/vendor.oplus.hardware.charger-V11-service
+service oplus_charger_hal_service /odm/bin/hw/vendor.oplus.hardware.charger-V12-service
     interface aidl vendor.oplus.hardware.charger.ICharger/default
     class hal
     user system
@@ -11,16 +11,32 @@ service wlschgd /odm/bin/hw/wlschgd
     oneshot
 
 on early-boot
+    chown system system /sys/class/oplus_chg/battery/bs_blind_cfg
     chmod 0664 /sys/class/oplus_chg/common/track_hidl
     chown system system /sys/class/oplus_chg/common/track_hidl
+    chown system system /dev/oplus_batt_1_fg
+    chown system system /dev/oplus_batt_2_fg
+    chmod 0600 /dev/oplus_batt_1_fg
+    chmod 0600 /dev/oplus_batt_2_fg
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/patch_load
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/trigger
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/ready
 
 on init
+    chown system system /sys/class/oplus_chg/battery/bs_blind_cfg
     chmod 0664 /sys/class/oplus_chg/common/track_hidl
     chown system system /sys/class/oplus_chg/common/track_hidl
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/patch_load
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/trigger
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/ready
 
 on boot
+    chown system system /sys/class/oplus_chg/battery/bs_blind_cfg
     chown system system /dev/wls_dev
     chmod 0660 /dev/wls_dev
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/patch_load
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/trigger
+    chown system system /sys/class/oplus_ocpb/oplus_ocpb/ready
     start wlschgd
 
 on charger
@@ -59,6 +75,8 @@ on property:sys.boot_completed=1
     chmod 0666 /sys/class/oplus_chg/battery/normal_current_now
     chmod 0666 /sys/class/oplus_chg/battery/battery_notify_code
     chown system system /sys/class/oplus_chg/battery/aging_ffc_data
+    chown system system /sys/class/oplus_chg/battery/ai_cv_curve
+    chown system system /sys/class/oplus_chg/battery/ai_cv_fc_thresh
     chmod 0666 /sys/class/oplus_chg/common/track_hidl
     chmod 0644 /dev/chg_test_kit
     chown system system /dev/chg_test_kit
@@ -91,6 +109,14 @@ on property:sys.boot_completed=1
     chown system system /sys/class/oplus_chg/battery/gauge_info
     chown system system /sys/class/oplus_chg/common/sili_ic_alg_cfg
     chown system system /sys/class/oplus_chg/common/chg_up_limit
+    chown system system /sys/class/oplus_chg/common/powerbank_update_action
+    chown system system /sys/class/oplus_chg/common/powerbank_fixed_msg
+    chown system system /sys/class/oplus_chg/common/powerbank_dynamic_msg
+    chown system system /sys/class/oplus_chg/common/powerbank_abnormal_msg
+    chmod 0644 /sys/class/oplus_chg/common/powerbank_update_action
+    chmod 0644 /sys/class/oplus_chg/common/powerbank_fixed_msg
+    chmod 0644 /sys/class/oplus_chg/common/powerbank_dynamic_msg
+    chmod 0644 /sys/class/oplus_chg/common/powerbank_abnormal_msg
     chown system system /sys/class/oplus_chg/common/byb_status
     chown system system /sys/class/oplus_chg/common/byb_vout
     chown system system /sys/class/oplus_chg/common/boost_disable_auto_mode
@@ -110,6 +136,7 @@ on property:sys.boot_completed=1
     chown system system /sys/bus/platform/devices/ext-power-throttling/ext_power_throttle_ut
     chown system system /proc/usb/repeater_parameters
     chown system system /proc/oplus_usb_eusb2/eusb2
+    chown system system /proc/usb/hsphy_device_eye_pattern
     chown system system /sys/class/oplus_chg/battery/reset_gauge
     chown system system /sys/class/oplus_chg/battery/batt_ic_sn
     chown system system /sys/class/oplus_chg/battery/historic_soh_date
@@ -117,18 +144,27 @@ on property:sys.boot_completed=1
     chmod 0666 /proc/usb/repeater_parameters
     chmod 0666 /proc/oplus_usb_eusb2/eusb2
     chmod 0666 /proc/oplus_usb_xsphy/xsphy
+    chmod 0640 /proc/usb/hsphy_device_eye_pattern
     chown system system /sys/class/oplus_chg/common/non_standard_chg_switch
     chown system system /sys/class/oplus_chg/battery/dual_cells_batt_health
+    chown system system /sys/class/oplus_chg/battery/cell_balance_mode
     chown system system /sys/class/oplus_chg/common/plc
     chown system system /sys/class/oplus_chg/wireless/rx_disable
     chown system system /sys/class/oplus_chg/wireless/bt_info
     chown system system /sys/class/oplus_chg/wireless/wlspen_info
     chown system system /sys/class/oplus_chg/wireless/wlspen_soc
     chown system system /sys/class/oplus_chg/wireless/wlspen_dischg_soc
+    chown system system /sys/class/oplus_chg/wireless/tx_battery_info
+    chown system system /sys/class/oplus_chg/wireless/tx_battery_info/online
+    chown system system /sys/class/oplus_chg/wireless/tx_battery_info/info
     chown system system /sys/class/oplus_chg/wireless/ping_time
     chown system system /proc/wireless/mac_addr
     chown system system /sys/class/oplus_chg/common/dec_delta
     chown system system /sys/class/oplus_chg/battery/battery_seal_flag
+    chown system system /sys/devices/platform/soc/11f01000.i2c/i2c-5/5-0034/11f01000.i2c:mt6375@34:mtk-gauge/FG_daemon_log_level
+    chmod 0644 /sys/devices/platform/soc/11f01000.i2c/i2c-5/5-0034/11f01000.i2c:mt6375@34:mtk-gauge/FG_daemon_log_level
+    chown system system /sys/devices/platform/1c01a000.spmi/spmi-0/0-0e/1c01a000.spmi:mt6379@e:mtk-gauge/FG_daemon_log_level
+    chmod 0644 /sys/devices/platform/1c01a000.spmi/spmi-0/0-0e/1c01a000.spmi:mt6379@e:mtk-gauge/FG_daemon_log_level
     chown system system /sys/class/oplus_chg/common/lpd_config
     chown system system /sys/class/oplus_chg/battery/sec_ic_test
     chown system system /sys/class/oplus_chg/battery/chg_path
@@ -138,6 +174,12 @@ on property:sys.boot_completed=1
     chown system system /sys/class/oplus_chg/battery/gauge_nvram_stress_test
     chown system system /sys/class/oplus_chg/common/reverse_chg_info
     chown system system /sys/class/oplus_chg/usb/vdm_info
+    chown system system /dev/oplus_batt_1_fg
+    chown system system /dev/oplus_batt_2_fg
+    chmod 0600 /dev/oplus_batt_1_fg
+    chmod 0600 /dev/oplus_batt_2_fg
+    chown system system /sys/class/oplus_chg/battery/bs_blind_cfg
+
 service ufcsd /odm/bin/hw/ufcsd
     class main
     user system
@@ -158,11 +200,19 @@ on boot
     chown system system /sys/class/oplus_chg/battery/rechg_soc
     chown system system /sys/class/oplus_chg/battery/battery_used_flag
     chown system system /sys/class/oplus_chg/battery/dual_cells_batt_health
+    chown system system /sys/class/oplus_chg/battery/cell_balance_mode
     start ufcsd
     chown system system /sys/class/power_supply/battery/current_now
     chmod 0664 /sys/class/power_supply/battery/current_now
     chmod 0664 /sys/class/oplus_chg/common/track_hidl
     chown system system /sys/class/oplus_chg/common/track_hidl
+    chown system system /sys/class/oplus_chg/wireless/wlspen_info
+    chown system system /sys/class/oplus_chg/common/boost_cv
+    chmod 0664 /sys/class/oplus_chg/common/boost_cv
+    chown system system /sys/class/oplus_chg/common/boost_registers
+    chmod 0664 /sys/class/oplus_chg/common/boost_registers
+    chown system system /sys/class/oplus_chg/common/vbat_pwr
+    chmod 0664 /sys/class/oplus_chg/common/vbat_pwr
 
 on charger
     chown system system /dev/ufcs_dev
@@ -173,9 +223,16 @@ on charger
     chown system system /sys/class/oplus_chg/battery/gauge_type
     chown system system /sys/class/oplus_chg/battery/historic_soh_date
     chown system system /sys/class/oplus_chg/battery/dual_cells_batt_health
+    chown system system /sys/class/oplus_chg/battery/cell_balance_mode
     start ufcsd
     chown system system /sys/class/power_supply/battery/current_now
     chmod 0664 /sys/class/power_supply/battery/current_now
     chmod 0664 /sys/class/oplus_chg/common/track_hidl
     chown system system /sys/class/oplus_chg/common/track_hidl
-
+    chown system system /sys/class/oplus_chg/wireless/wlspen_info
+    chown system system /sys/class/oplus_chg/common/boost_cv
+    chmod 0664 /sys/class/oplus_chg/common/boost_cv
+    chown system system /sys/class/oplus_chg/common/boost_registers
+    chmod 0664 /sys/class/oplus_chg/common/boost_registers
+    chown system system /sys/class/oplus_chg/common/vbat_pwr
+    chmod 0664 /sys/class/oplus_chg/common/vbat_pwr

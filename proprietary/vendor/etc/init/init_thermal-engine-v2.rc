@@ -15,3 +15,10 @@ service thermal-engine /vendor/bin/thermal-engine-v2
 
 on property:sys.boot_completed=1
 	restart thermal-engine
+
+#Zhangjian@BSP.power,2026/04/23,Thermal engine adding ODPM switch function
+on property:sys.odpmenable=1
+    write /sys/class/powercap/qpt/enabled 1
+
+on property:sys.odpmenable=0
+    write /sys/class/powercap/qpt/enabled 0

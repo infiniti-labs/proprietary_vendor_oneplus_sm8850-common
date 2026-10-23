@@ -64,4 +64,5 @@ recvfrom: 1
 write: 1
 unlinkat: 1
 gettid: 1
+lseek:1
 lseek: 1

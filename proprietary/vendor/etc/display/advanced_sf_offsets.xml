@@ -46,6 +46,7 @@ Confidential and Proprietary - Qualcomm Technologies, Inc.
             <FpsOffsetMap fps="120" SfDurationPercentage="124"/>
             <FpsOffsetMap fps="144" SfDurationPercentage="149" AppDuration="10333333"/>
             <FpsOffsetMap fps="165" SfDurationPercentage="149" AppDuration="10333333"/>
+            <FpsOffsetMap fps="185" SfDurationPercentage="150" AppDuration="8108108"/>
         </Device>
     </DeviceSettingList>
 </AdvancedSfOffsetSetting>

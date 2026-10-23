@@ -77,3 +77,20 @@ on post-fs-data
     copy /vendor/etc/058eb5c6-666d-4d06-b996-522410412877_2026-01-12_platform_RSA_license_75992976805022424249809535731023317112.pfm /mnt/vendor/persist/data/pfm/licenses/058eb5c6-666d-4d06-b996-522410412877_2026-01-12_platform_RSA_license_75992976805022424249809535731023317112.pfm
     chmod 0600 /mnt/vendor/persist/data/pfm/licenses/058eb5c6-666d-4d06-b996-522410412877_2026-01-12_platform_RSA_license_75992976805022424249809535731023317112.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/058eb5c6-666d-4d06-b996-522410412877_2026-01-12_platform_RSA_license_75992976805022424249809535731023317112.pfm
+
+#DewuLong@MM.Display.LCD, 2026/01/04, add SM8850 AP DBI unity bin files
+    copy /odm/etc/demura_config_00002100000000af /mnt/vendor/persist/display/demura_config_00002100000000af
+    chmod 0600 /mnt/vendor/persist/display/demura_config_00002100000000af
+    chown system system /mnt/vendor/persist/display/demura_config_00002100000000af
+
+    copy /odm/etc/demura_privatekey_00002100000000af /mnt/vendor/persist/display/demura_privatekey_00002100000000af
+    chmod 0600 /mnt/vendor/persist/display/demura_privatekey_00002100000000af
+    chown system system /mnt/vendor/persist/display/demura_privatekey_00002100000000af
+
+    copy /odm/etc/demura_publickey_00002100000000af /mnt/vendor/persist/display/demura_publickey_00002100000000af
+    chmod 0600 /mnt/vendor/persist/display/demura_publickey_00002100000000af
+    chown system system /mnt/vendor/persist/display/demura_publickey_00002100000000af
+
+    copy /odm/etc/demura_signature_00002100000000af /mnt/vendor/persist/display/demura_signature_00002100000000af
+    chmod 0600 /mnt/vendor/persist/display/demura_signature_00002100000000af
+    chown system system /mnt/vendor/persist/display/demura_signature_00002100000000af

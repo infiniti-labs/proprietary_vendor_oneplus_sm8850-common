@@ -200,7 +200,7 @@ on property:sys.boot_completed=1
 #endif /*OPLUS_FEATURE_RF_LICENSES*/
 
 #ifdef OPLUS_FEATURE_ODM_RF_ICC
-# Huo.Chen@SYSTEM.RF, 2024/09/06, Add for ICC
+## Huo.Chen@SYSTEM.RF, 2024/09/06, Add for ICC
 on boot && property:persist.vendor.oplus.icc.module.enable=1
     chmod 0660 /dev/iccmcu_dev
     chown system system /dev/iccmcu_dev
