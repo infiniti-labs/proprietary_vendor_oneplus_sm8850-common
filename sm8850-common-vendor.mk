@@ -666,6 +666,7 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_nearby_so \
     libdiag_system \
     libdiagatbparser_system \
+    libhorae_fan_orientation \
     libmmosal \
     libmmparser_lite \
     libmmrtpdecoder \
