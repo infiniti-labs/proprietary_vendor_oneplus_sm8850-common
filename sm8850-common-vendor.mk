@@ -316,8 +316,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bttpi-impl \
     vendor.qti.hardware.capabilityconfigstore-impl \
     vendor.qti.hardware.fm-impl \
-    vendor.qti.hardware.qseecom@1.0-impl \
-    vendor.qti.hardware.qteeconnector@1.0-impl \
     vendor.qti.hardware.servicetrackeraidl-impl \
     vulkan.adreno \
     libAVFVirtClientInterface \
@@ -353,7 +351,6 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session_aidl_qti \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
-    libbt-hidlclient \
     libbtnv \
     libcapiv2svacnnvendor \
     libcapiv2svarnnvendor \
@@ -634,10 +631,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf2-V1-ndk \
     vendor.qti.hardware.qasr-V3-ndk \
     vendor.qti.hardware.qconfig-V1-ndk \
-    vendor.qti.hardware.qdutils_disp@1.0 \
     vendor.qti.hardware.qseecom-V1-ndk \
     vendor.qti.hardware.qteeconnector-V1-ndk \
-    vendor.qti.hardware.qteeconnector@1.0 \
     vendor.qti.hardware.secureprocessor.common-V1-ndk \
     vendor.qti.hardware.secureprocessor.common-helper \
     vendor.qti.hardware.secureprocessor.config-V1-ndk \
