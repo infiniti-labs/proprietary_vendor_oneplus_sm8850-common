@@ -352,7 +352,6 @@ PRODUCT_PACKAGES += \
     libQcelp13SwCodec \
     libQshQmiIDL \
     libQshSession \
-    libTxPwrJni \
     libVirtClientInterface \
     libadm \
     libadreno_app_profiles \
