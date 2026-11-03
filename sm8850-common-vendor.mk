@@ -16,7 +16,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.charger-V12-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.charger-V12-service.rc \
     vendor/oneplus/sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.cryptoeng@1.0-service_FDE.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.cryptoeng@1.0-service_FDE.rc \
     vendor/oneplus/sm8850-common/proprietary/odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc \
-    vendor/oneplus/sm8850-common/proprietary/odm/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
     vendor/oneplus/sm8850-common/proprietary/odm/firmware/secure_ta/cryptoeng.b00:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/cryptoeng.b00 \
     vendor/oneplus/sm8850-common/proprietary/odm/firmware/secure_ta/cryptoeng.b01:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/cryptoeng.b01 \
     vendor/oneplus/sm8850-common/proprietary/odm/firmware/secure_ta/cryptoeng.b02:$(TARGET_COPY_OUT_ODM)/firmware/secure_ta/cryptoeng.b02 \
