@@ -26,49 +26,66 @@
     <Decoders>
         <!-- C2 HW decoders -->
         <MediaCodec name="c2.qti.avc.decoder" type="video/avc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="502-639" />
-            <Limit name="measured-frame-rate-720x480" range="619-823" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-320x240" range="1847-2114" />
+            <Limit name="measured-frame-rate-720x480" range="2073-2374" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-1280x720" range="470-626" />
             <Limit name="measured-frame-rate-1920x1088" range="199-309" />
         </MediaCodec>
         <MediaCodec name="c2.qti.avc.decoder.low_latency" type="video/avc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="326-662" />
-            <!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-            <!-- Xinyang.Tang@MULTIMEDIA.MEDIASERVER.PLAYER.10165679, 2025/10/11, Modify for matching real frame rate -->
-            <!-- <Limit name="measured-frame-rate-720x480" range="216-593" /> -->
-            <!-- #else -->
-            <Limit name="measured-frame-rate-720x480" range="326-662" />
-            <!-- #endif  -->
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-320x240" range="1895-2170" />
+            <Limit name="measured-frame-rate-720x480" range="2306-2640" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-1280x720" range="326-659" />
             <Limit name="measured-frame-rate-1920x1080" range="216-306" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.decoder" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-352x288" range="310-764" />
-            <Limit name="measured-frame-rate-720x480" range="265-552" />
-            <Limit name="measured-frame-rate-1280x720" range="596-730" />
-            <Limit name="measured-frame-rate-1920x1080" range="305-472" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-352x288" range="1784-2042" />
+            <Limit name="measured-frame-rate-640x360" range="2433-2786" />
+            <Limit name="measured-frame-rate-720x480" range="2386-2732" />
+            <Limit name="measured-frame-rate-1280x720" range="1624-1859" />
+            <Limit name="measured-frame-rate-1920x1080" range="1058-1212" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-3840x2160" range="97-135" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.decoder.low_latency" type="video/hevc" update="true">
             <Limit name="measured-frame-rate-352x288" range="523-1204" />
-            <Limit name="measured-frame-rate-640x360" range="653-923" />
-            <Limit name="measured-frame-rate-720x480" range="355-881" />
-            <Limit name="measured-frame-rate-1280x720" range="293-787" />
-            <Limit name="measured-frame-rate-1920x1080" range="304-471" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-640x360" range="2376-2721" />
+            <Limit name="measured-frame-rate-720x480" range="2450-2805" />
+            <Limit name="measured-frame-rate-1280x720" range="1498-1715" />
+            <Limit name="measured-frame-rate-1920x1080" range="1041-1191" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-3840x2160" range="97-135" />
         </MediaCodec>
         <MediaCodec name="c2.qti.vp9.decoder" type="video/x-vnd.on2.vp9" update="true">
-            <Limit name="measured-frame-rate-320x180" range="297-606" />
-            <Limit name="measured-frame-rate-640x360" range="324-664" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-320x180" range="2103-2408" />
+            <Limit name="measured-frame-rate-640x360" range="2325-2662" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-1280x720" range="551-733" />
-            <Limit name="measured-frame-rate-1920x1080" range="357-506" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-1920x1080" range="1065-1219" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-3840x2160" range="93-133" />
         </MediaCodec>
         <MediaCodec name="c2.qti.vp9.decoder.low_latency" type="video/x-vnd.on2.vp9" update="true">
-            <Limit name="measured-frame-rate-320x180" range="422-563" />
-            <Limit name="measured-frame-rate-640x360" range="315-755" />
-            <Limit name="measured-frame-rate-1280x720" range="525-694" />
-            <Limit name="measured-frame-rate-1920x1080" range="357-506" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-320x180" range="2095-2398" />
+            <Limit name="measured-frame-rate-640x360" range="2218-2539" />
+            <Limit name="measured-frame-rate-1280x720" range="1475-1689" />
+            <Limit name="measured-frame-rate-1920x1080" range="1070-1225" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-3840x2160" range="93-133" />
         </MediaCodec>
         <MediaCodec name="c2.qti.av1.decoder" type="video/av01" update="true">
@@ -155,21 +172,30 @@
     <Encoders>
         <!-- C2 HW encoders -->
         <MediaCodec name="c2.qti.avc.encoder" type="video/avc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="200-600" />
-            <Limit name="measured-frame-rate-720x480" range="242-333" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-320x240" range="1602-1834" />
+            <Limit name="measured-frame-rate-720x480" range="862-987" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-1280x720" range="328-438" />
             <Limit name="measured-frame-rate-1920x1080" range="220-312" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="480-535" />
-            <Limit name="measured-frame-rate-720x480" range="293-395" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-320x240" range="1625-1860" />
+            <Limit name="measured-frame-rate-720x480" range="837-958" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-1280x720" range="280-403" />
             <Limit name="measured-frame-rate-1920x1080" range="210-326" />
             <Limit name="measured-frame-rate-3840x2160" range="69-99" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder.hdr" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="480-535" />
-            <Limit name="measured-frame-rate-720x480" range="165-210" />
+            <!-- #ifdef OPLUS_BUG_COMPATIBILITY -->
+            <!-- Liansheng.zhong@MULTIMEDIA.MEDIASERVER.PLAYER, 2026/9/22, mario measured fit -->
+            <Limit name="measured-frame-rate-320x240" range="1637-1874" />
+            <Limit name="measured-frame-rate-720x480" range="823-942" />
+            <!-- #endif OPLUS_BUG_COMPATIBILITY -->
             <Limit name="measured-frame-rate-1280x720" range="266-372" />
             <Limit name="measured-frame-rate-1920x1080" range="228-322" />
             <Limit name="measured-frame-rate-3840x2160" range="66-94" />

@@ -197,6 +197,11 @@ on property:sys.boot_completed=1
     chmod 0600 /mnt/vendor/persist/data/pfm/licenses/oem_qpm8590_qeb_platform_license.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/oem_qpm8590_qeb_platform_license.pfm
 
+on boot
+    copy /odm/etc/oem_FBRX_platform_EC_license.pfm /mnt/vendor/persist/data/pfm/licenses/oem_FBRX_platform_EC_license.pfm
+    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/oem_FBRX_platform_EC_license.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/oem_FBRX_platform_EC_license.pfm
+
 #endif /*OPLUS_FEATURE_RF_LICENSES*/
 
 #ifdef OPLUS_FEATURE_ODM_RF_ICC
