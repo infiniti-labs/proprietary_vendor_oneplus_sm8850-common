@@ -21624,7 +21624,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "vendor.oplus.hardware.olck_ca-V1-ndk",
                 "vendor.oplus.hardware.subsys-V5-ndk",
-                "vendor.oplus.hardware.subsys_radio-V2-ndk_odm",
+                "vendor.oplus.hardware.subsys_radio-oplus-V2-ndk",
                 "libsml",
                 "libradioapis",
                 "libipcapis",
@@ -21807,6 +21807,30 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsml",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libsml.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsubsys-utils",
     owner: "oneplus",
     strip: {
@@ -21869,8 +21893,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.oplus.hardware.subsys_radio-V2-ndk_odm",
-    stem: "vendor.oplus.hardware.subsys_radio-V2-ndk",
+    name: "vendor.oplus.hardware.olck_ca-V1-ndk",
     owner: "oneplus",
     strip: {
         none: true,
@@ -21878,7 +21901,32 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/odm/lib64/vendor.oplus.hardware.subsys_radio-V2-ndk.so",
+                "proprietary/odm/lib64/vendor.oplus.hardware.olck_ca-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.oplus.hardware.subsys_radio-oplus-V2-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/vendor.oplus.hardware.subsys_radio-oplus-V2-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",

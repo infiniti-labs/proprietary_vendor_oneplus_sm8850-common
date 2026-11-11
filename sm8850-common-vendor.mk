@@ -1246,9 +1246,11 @@ PRODUCT_PACKAGES += \
     librpmbengclient \
     libsecurity_event_dcs_vnd \
     libsecurity_event_olc_vnd \
+    libsml \
     libsubsys-utils \
     libvasapi \
-    vendor.oplus.hardware.subsys_radio-V2-ndk_odm \
+    vendor.oplus.hardware.olck_ca-V1-ndk \
+    vendor.oplus.hardware.subsys_radio-oplus-V2-ndk \
     CACertService \
     CneApp \
     IWlanService \
